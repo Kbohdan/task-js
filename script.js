@@ -1,12 +1,13 @@
-let num = prompt("Введите трех значное число");
+let sum = +prompt("Введите сумму в USD которую хотите перевести");
 
+let currency = prompt("Введите валюту в которую хотите перевести: 'EUR','UAN','AZN'");
 
-if (num == "" || num == undefined) {
-    alert("Введите число")
-}
-
-if (num[1] && num[2] == num[0] || num[0] && num[2] == num[1]) {
-    alert('Здесь есть одинаковые числа')
-} else if (num[1] && num[2] != num[0] || num[0] && num[2] != num[1]) {
-    alert('Здесь нет одинаковых чисел')
+if (currency == 'EUR') {
+    alert(sum * 0.82);
+} else if (currency == 'UAN') {
+    alert(sum * 27.95);
+} else if (currency == 'AZN') {
+    alert(sum * 1.70);
+} else {
+    alert("Не правельно введена валюта");
 }
