@@ -1,26 +1,18 @@
-/* let inputIn = document.querySelector('.input');
-let button = document.querySelector('button');
-let div = document.querySelector('.out');
-
-button.onclick = function() {
-    let b = inputIn.value;
-    div.innerHTML = b;
-    inputIn.value = '';
-} */
-
-let inputIn = document.querySelector('.i-1');
-let btn = document.querySelector('.b-1');
-let div = document.querySelector('.out-1');
-
+let inputIn1 = document.querySelector('.a21');
+let inputIn2 = document.querySelector('.a22');
+let btn = document.querySelector('.b-2');
+let out = document.querySelector('.out-2');
 
 btn.onclick = function() {
-    if (inputIn.value == 4) {
-        let b = inputIn.value;
-        div.innerHTML = 'true';
-        inputIn.value = '';
-    } else {
-        let b = inputIn.value;
-        div.innerHTML = 'false';
-        inputIn.value = '';
+    let b = inputIn1.value;
+    let c = inputIn2.value;
+    if (b > c) {
+        out.innerHTML = inputIn1.value;
+        inputIn1.value = '';
+        inputIn2.value = '';
+    } else if (b < c) {
+        out.innerHTML = inputIn2.value;
+        inputIn1.value = '';
+        inputIn2.value = '';
     }
 }
